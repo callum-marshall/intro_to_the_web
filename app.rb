@@ -1,12 +1,10 @@
- require 'sinatra'
- set :session_secret, 'super secret'
+require 'sinatra'
+set :session_secret, 'super secret'
 
 get '/cat' do
-  erb(:index)
-end
-
-get '/string' do
-  erb("Hi there, Visitor <%= 2 + 2 %>!")
+  @name = ["Amigo", "Oscar", "Viking"].sample
+  @type = [" -a nice cat", " -a bad cat"].sample
+  erb :index
 end
 
 # get '/' do
