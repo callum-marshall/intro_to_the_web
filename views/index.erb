@@ -1,4 +1,6 @@
-<h1><%= @name %><h1>
+<% if @name %>
+  <h1>My name is <%= @name %></h1>
+<% end %>
 <h3><%= @type %><h3>
 <div>
   <img src='http://bit.ly/1eze8aE'
